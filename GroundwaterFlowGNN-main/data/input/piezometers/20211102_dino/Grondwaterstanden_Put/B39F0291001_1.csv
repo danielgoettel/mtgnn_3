@@ -1,0 +1,31 @@
+Titel:,,,,,,,,,,,
+Gebruikersnaam:,,,,,,,,,,,
+Periode aangevraagd:,01-01-1800,tot:,02-11-2021,,,,,,,,
+Gegevens beschikbaar:,28-08-1973,tot:,14-10-1976,,,,,,,,
+Datum: ,02-11-2021,,,,,,,,,,
+Referentie:,NAP,,,,,,,,,,
+
+NAP:,Normaal Amsterdams Peil,,,,,,,,,,
+MV:,Maaiveld,,,,,,,,,,
+MP:,Meetpunt,,,,,,,,,,
+
+Locatie,Filternummer,Externe aanduiding,X-coordinaat,Y-coordinaat,Maaiveld (cm t.o.v. NAP),Datum maaiveld gemeten,Startdatum,Einddatum,Meetpunt (cm t.o.v. NAP),Meetpunt (cm t.o.v. MV),Bovenkant filter (cm t.o.v. NAP),Onderkant filter (cm t.o.v. NAP)
+B39F0291,001,39FL0291,176960,439900,755,12-06-1973,12-06-1973,28-08-1973,,0,,
+B39F0291,001,39FL0291,176960,439900,755,12-06-1973,28-08-1973,14-12-1976,811,56,461,361
+
+
+Locatie,Filternummer,Peildatum,Stand (cm t.o.v. MP),Stand (cm t.o.v. MV),Stand (cm t.o.v. NAP),Bijzonderheid,Opmerking,,,
+B39F0291,001,28-08-1973,227,171,584,,,,,,
+B39F0291,001,15-10-1973,215,159,596,,,,,,
+B39F0291,001,14-12-1973,140,84,671,,,,,,
+B39F0291,001,29-04-1974,198,142,613,,,,,,
+B39F0291,001,28-08-1974,204,148,607,,,,,,
+B39F0291,001,14-10-1974,181,125,630,,,,,,
+B39F0291,001,13-12-1974,121,65,690,,,,,,
+B39F0291,001,28-04-1975,165,109,646,,,,,,
+B39F0291,001,28-08-1975,195,139,616,,,,,,
+B39F0291,001,14-10-1975,197,141,614,,,,,,
+B39F0291,001,15-12-1975,207,151,604,,,,,,
+B39F0291,001,28-04-1976,206,150,605,,,,,,
+B39F0291,001,27-08-1976,230,174,581,,,,,,
+B39F0291,001,14-10-1976,204,148,607,,,,,,

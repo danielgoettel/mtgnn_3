@@ -1,0 +1,30 @@
+Titel:,,,,,,,,,,,
+Gebruikersnaam:,,,,,,,,,,,
+Periode aangevraagd:,01-01-1800,tot:,02-11-2021,,,,,,,,
+Gegevens beschikbaar:,14-12-1983,tot:,13-07-1984,,,,,,,,
+Datum: ,02-11-2021,,,,,,,,,,
+Referentie:,NAP,,,,,,,,,,
+
+NAP:,Normaal Amsterdams Peil,,,,,,,,,,
+MV:,Maaiveld,,,,,,,,,,
+MP:,Meetpunt,,,,,,,,,,
+
+Locatie,Filternummer,Externe aanduiding,X-coordinaat,Y-coordinaat,Maaiveld (cm t.o.v. NAP),Datum maaiveld gemeten,Startdatum,Einddatum,Meetpunt (cm t.o.v. NAP),Meetpunt (cm t.o.v. MV),Bovenkant filter (cm t.o.v. NAP),Onderkant filter (cm t.o.v. NAP)
+B40C0545,001,40CP0105,187200,428700,1525,14-12-1983,14-12-1983,28-07-1984,1566,41,75,-425
+
+
+Locatie,Filternummer,Peildatum,Stand (cm t.o.v. MP),Stand (cm t.o.v. MV),Stand (cm t.o.v. NAP),Bijzonderheid,Opmerking,,,
+B40C0545,001,14-12-1983,880,839,686,,,,,,
+B40C0545,001,13-01-1984,831,790,735,,,,,,
+B40C0545,001,27-01-1984,778,737,788,,,,,,
+B40C0545,001,14-02-1984,708,667,858,,,,,,
+B40C0545,001,28-02-1984,741,700,825,,,,,,
+B40C0545,001,14-03-1984,785,744,781,,,,,,
+B40C0545,001,28-03-1984,808,767,758,,,,,,
+B40C0545,001,13-04-1984,788,747,778,,,,,,
+B40C0545,001,26-04-1984,786,745,780,,,,,,
+B40C0545,001,14-05-1984,785,744,781,,,,,,
+B40C0545,001,28-05-1984,789,748,777,,,,,,
+B40C0545,001,14-06-1984,784,743,782,,,,,,
+B40C0545,001,28-06-1984,791,750,775,,,,,,
+B40C0545,001,13-07-1984,804,763,762,,,,,,

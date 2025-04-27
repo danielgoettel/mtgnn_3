@@ -1,0 +1,7 @@
+LOCATIE gegevens
+NITG-nr	X-coord	Y-coord	Coordinaat systeem	Kaartblad	Bepaling locatie	Maaiveldhoogte (m tov NAP)	Bepaling maaiveldhoogte	OLGA-nr	RIVM-nr	Aantal analyses	Meetnet	Indeling	
+B40A0244	183462	439729	Rijksdriehoeksmeting	40A	Geschat, detailkaart 1:2500	8.8		40AA3244		1			
+
+KWALITEIT gegevens VLOEIBAAR
+NITG-nr	Monster datum	Monster-nr	Monster apparatuur	Mengmonster	Bovenkant monster (cm tov MV)	Onderkant monster (cm tov MV)	Analyse datum	C-14 (o/o)	O-18 (o/oo)	T-isotopen (C)	TEMP-V (C)	pH (-)	
+B40A0244		C1980-08-1069		nee	5546.0	6912.9995	27-08-1980	34.8	-6.42	10	0	7.9	

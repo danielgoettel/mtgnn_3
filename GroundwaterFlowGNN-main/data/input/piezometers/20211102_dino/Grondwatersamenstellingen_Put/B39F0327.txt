@@ -1,0 +1,8 @@
+LOCATIE gegevens
+NITG-nr	X-coord	Y-coord	Coordinaat systeem	Kaartblad	Bepaling locatie	Maaiveldhoogte (m tov NAP)	Bepaling maaiveldhoogte	OLGA-nr	RIVM-nr	Aantal analyses	Meetnet	Indeling	
+B39F0327	179240	438691	Rijksdriehoeksmeting	39F		7.53		39FP0327		2			
+
+KWALITEIT gegevens VLOEIBAAR
+NITG-nr	Monster datum	Monster-nr	Monster apparatuur	Mengmonster	Bovenkant monster (cm tov MV)	Onderkant monster (cm tov MV)	Analyse datum	C-13 (o/oo)	C-14 (o/o)	CO2 (mg/l)	CO3-- (mg/l)	Ca (mg/l)	Cl- (mg/l)	EC (mS/m)	Fe (mg/l)	HCO3 (mg/l)	K (mg/l)	Mg (mg/l)	Mn (mg/l)	NH4 (mg/l)	NO3 (mg/l)	Na (mg/l)	O-18 (o/oo)	SO4 (mg/l)	T-isotopen (C)	TEMP-V (C)	TOC (mg/l)	TOTH (mmol/l)	pH (-)	
+B39F0327		C1980-04-1014		nee	4500.0	4700.0	10-04-1980	-11.87	34	0	0	35	7			125	.6	3.3				5.6	-7.26	7	9	0	<.1	1.009	7.8	
+B39F0327	29-11-1979	C1979-11-1152		nee	550.0	750.0	29-11-1979						38	47	24	55	4.4		.52	.33	<.5	30		137		20		1.45	6.4	

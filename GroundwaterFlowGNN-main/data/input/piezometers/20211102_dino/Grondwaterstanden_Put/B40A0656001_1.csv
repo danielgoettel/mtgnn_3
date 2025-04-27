@@ -1,0 +1,27 @@
+Titel:,,,,,,,,,,,
+Gebruikersnaam:,,,,,,,,,,,
+Periode aangevraagd:,01-01-1800,tot:,02-11-2021,,,,,,,,
+Gegevens beschikbaar:,14-10-1952,tot:,17-06-1955,,,,,,,,
+Datum: ,02-11-2021,,,,,,,,,,
+Referentie:,NAP,,,,,,,,,,
+
+NAP:,Normaal Amsterdams Peil,,,,,,,,,,
+MV:,Maaiveld,,,,,,,,,,
+MP:,Meetpunt,,,,,,,,,,
+
+Locatie,Filternummer,Externe aanduiding,X-coordinaat,Y-coordinaat,Maaiveld (cm t.o.v. NAP),Datum maaiveld gemeten,Startdatum,Einddatum,Meetpunt (cm t.o.v. NAP),Meetpunt (cm t.o.v. MV),Bovenkant filter (cm t.o.v. NAP),Onderkant filter (cm t.o.v. NAP)
+B40A0656,001,40AL0259,184720,439750,814,14-10-1952,14-10-1952,17-06-1955,814,0,,
+B40A0656,001,40AL0259,184720,439750,814,14-10-1952,17-06-1955,22-10-1962,806,-8,,
+
+
+Locatie,Filternummer,Peildatum,Stand (cm t.o.v. MP),Stand (cm t.o.v. MV),Stand (cm t.o.v. NAP),Bijzonderheid,Opmerking,,,
+B40A0656,001,14-10-1952,87,87,727,,,,,,
+B40A0656,001,18-12-1952,3,3,811,,,,,,
+B40A0656,001,28-04-1953,92,92,722,,,,,,
+B40A0656,001,28-08-1953,75,75,739,,,,,,
+B40A0656,001,14-10-1953,102,102,712,,,,,,
+B40A0656,001,14-12-1953,130,130,684,,,,,,
+B40A0656,001,28-04-1954,105,105,709,,,,,,
+B40A0656,001,26-08-1954,55,55,759,,,,,,
+B40A0656,001,14-10-1954,60,60,754,,,,,,
+B40A0656,001,17-06-1955,78,86,728,,,,,,

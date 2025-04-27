@@ -1,0 +1,27 @@
+Titel:,,,,,,,,,,,
+Gebruikersnaam:,,,,,,,,,,,
+Periode aangevraagd:,01-01-1800,tot:,02-11-2021,,,,,,,,
+Gegevens beschikbaar:,15-12-1983,tot:,17-05-1984,,,,,,,,
+Datum: ,02-11-2021,,,,,,,,,,
+Referentie:,NAP,,,,,,,,,,
+
+NAP:,Normaal Amsterdams Peil,,,,,,,,,,
+MV:,Maaiveld,,,,,,,,,,
+MP:,Meetpunt,,,,,,,,,,
+
+Locatie,Filternummer,Externe aanduiding,X-coordinaat,Y-coordinaat,Maaiveld (cm t.o.v. NAP),Datum maaiveld gemeten,Startdatum,Einddatum,Meetpunt (cm t.o.v. NAP),Meetpunt (cm t.o.v. MV),Bovenkant filter (cm t.o.v. NAP),Onderkant filter (cm t.o.v. NAP)
+B40D0359,001,40DP7006,190860,430280,,,01-12-1983,15-05-1985,1083,,733,683
+
+
+Locatie,Filternummer,Peildatum,Stand (cm t.o.v. MP),Stand (cm t.o.v. MV),Stand (cm t.o.v. NAP),Bijzonderheid,Opmerking,,,
+B40D0359,001,15-12-1983,298,,785,,,,,,
+B40D0359,001,27-12-1983,303,,780,,,,,,
+B40D0359,001,12-01-1984,226,,857,,,,,,
+B40D0359,001,26-01-1984,130,,953,,,,,,
+B40D0359,001,13-02-1984,,,,O,,,,,
+B40D0359,001,27-02-1984,165,,918,,,,,,
+B40D0359,001,16-03-1984,227,,856,,,,,,
+B40D0359,001,26-03-1984,244,,839,,,,,,
+B40D0359,001,12-04-1984,156,,927,,,,,,
+B40D0359,001,27-04-1984,230,,853,,,,,,
+B40D0359,001,17-05-1984,243,,840,,,,,,

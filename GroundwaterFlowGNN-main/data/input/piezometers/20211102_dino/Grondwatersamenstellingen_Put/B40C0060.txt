@@ -1,0 +1,12 @@
+LOCATIE gegevens
+NITG-nr	X-coord	Y-coord	Coordinaat systeem	Kaartblad	Bepaling locatie	Maaiveldhoogte (m tov NAP)	Bepaling maaiveldhoogte	OLGA-nr	RIVM-nr	Aantal analyses	Meetnet	Indeling	
+B40C0060	188950	430970	Rijksdriehoeksmeting	40C		9.96		40CP0086		6			
+
+KWALITEIT gegevens VLOEIBAAR
+NITG-nr	Monster datum	Monster-nr	Monster apparatuur	Mengmonster	Bovenkant monster (cm tov MV)	Onderkant monster (cm tov MV)	Analyse datum	Ca (mg/l)	Cl- (mg/l)	Fe (mg/l)	HCO3 (mg/l)	KMNO4V-O (mg/l)	Mg (mg/l)	Mn (mg/l)	NH4 (mg/l)	NH4-ORG (mg/l)	NO2 (mg/l)	NO3 (mg/l)	Na (mg/l)	SO4 (mg/l)	SiO2 (mg/l)	TEMP-V (C)	TIJDH (mmol/l)	TOTH (mmol/l)	
+B40C0060	10-11-1933	C1933-11-1003		nee	11550.0	11650.0	10-11-1933		122	.6				.05								0			
+B40C0060	24-10-1933	C1933-10-1019		nee	850.0	950.0	24-10-1933	80.2	9	1.9	272	14.1	5.6	.09	.07	.05	.06	.56			40.8	0	4.71	2.268	
+B40C0060	19-10-1933	C1933-10-1013		nee	5800.0	6000.0	19-10-1933	62.1	9	1.8	268	5.8	7.6	.07	.07	.03	.16	.35	24.98	10.9	14	0	3.81	1.89	
+B40C0060	14-10-1933	C1933-10-1011		nee	3900.0	4000.0	14-10-1933	85	33	1.4	252	5.9	11.5	.45	.19	.06	.19	.4	7.22	24.4	41.6	0	4.64	2.646	
+B40C0060	10-10-1933	C1933-10-1009		nee	1900.0	2100.0	10-10-1933	63.4	33	.23	232	4.1	10	.24	.6	.08		.24	26.95	22.7	5.6	0	3.52	2.034	
+B40C0060	06-10-1933	C1933-10-1007		nee	850.0	950.0	06-10-1933	80	35	2.5	268	4.8	11.5	.61	.45	.07	0	.3	23.8	34.9	39.2	0	4.71	2.52	

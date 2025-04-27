@@ -1,0 +1,25 @@
+Titel:,,,,,,,,,,,
+Gebruikersnaam:,,,,,,,,,,,
+Periode aangevraagd:,01-01-1800,tot:,02-11-2021,,,,,,,,
+Gegevens beschikbaar:,28-10-1960,tot:,15-03-1961,,,,,,,,
+Datum: ,02-11-2021,,,,,,,,,,
+Referentie:,NAP,,,,,,,,,,
+
+NAP:,Normaal Amsterdams Peil,,,,,,,,,,
+MV:,Maaiveld,,,,,,,,,,
+MP:,Meetpunt,,,,,,,,,,
+
+Locatie,Filternummer,Externe aanduiding,X-coordinaat,Y-coordinaat,Maaiveld (cm t.o.v. NAP),Datum maaiveld gemeten,Startdatum,Einddatum,Meetpunt (cm t.o.v. NAP),Meetpunt (cm t.o.v. MV),Bovenkant filter (cm t.o.v. NAP),Onderkant filter (cm t.o.v. NAP)
+B39F0778,001,39FL0011,177580,438260,713,28-10-1960,28-10-1960,14-04-1961,747,34,597,547
+
+
+Locatie,Filternummer,Peildatum,Stand (cm t.o.v. MP),Stand (cm t.o.v. MV),Stand (cm t.o.v. NAP),Bijzonderheid,Opmerking,,,
+B39F0778,001,28-10-1960,120,86,627,,,,,,
+B39F0778,001,14-11-1960,134,100,613,,,,,,
+B39F0778,001,28-11-1960,104,70,643,,,,,,
+B39F0778,001,14-12-1960,125,91,622,,,,,,
+B39F0778,001,03-01-1961,108,74,639,,,,,,
+B39F0778,001,15-01-1961,84,50,663,,,,,,
+B39F0778,001,14-02-1961,131,97,616,,,,,,
+B39F0778,001,28-02-1961,100,66,647,,,,,,
+B39F0778,001,15-03-1961,150,116,597,,,,,,

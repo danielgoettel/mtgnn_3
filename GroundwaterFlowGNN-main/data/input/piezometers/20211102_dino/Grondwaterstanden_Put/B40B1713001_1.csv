@@ -1,0 +1,28 @@
+Titel:,,,,,,,,,,,
+Gebruikersnaam:,,,,,,,,,,,
+Periode aangevraagd:,01-01-1800,tot:,02-11-2021,,,,,,,,
+Gegevens beschikbaar:,09-06-2017,tot:,20-06-2017,,,,,,,,
+Datum: ,02-11-2021,,,,,,,,,,
+Referentie:,NAP,,,,,,,,,,
+
+NAP:,Normaal Amsterdams Peil,,,,,,,,,,
+MV:,Maaiveld,,,,,,,,,,
+MP:,Meetpunt,,,,,,,,,,
+
+Locatie,Filternummer,Externe aanduiding,X-coordinaat,Y-coordinaat,Maaiveld (cm t.o.v. NAP),Datum maaiveld gemeten,Startdatum,Einddatum,Meetpunt (cm t.o.v. NAP),Meetpunt (cm t.o.v. MV),Bovenkant filter (cm t.o.v. NAP),Onderkant filter (cm t.o.v. NAP)
+B40B1713,001,,195153,439686,1062,08-08-2012,08-08-2012,20-06-2017,1053,-10,794,694
+
+
+Locatie,Filternummer,Peildatum,Stand (cm t.o.v. MP),Stand (cm t.o.v. MV),Stand (cm t.o.v. NAP),Bijzonderheid,Opmerking,,,
+B40B1713,001,09-06-2017,153,163,900,,,,,,
+B40B1713,001,10-06-2017,153,163,900,,,,,,
+B40B1713,001,11-06-2017,155,165,898,,,,,,
+B40B1713,001,12-06-2017,155,165,898,,,,,,
+B40B1713,001,13-06-2017,157,167,896,,,,,,
+B40B1713,001,14-06-2017,158,168,895,,,,,,
+B40B1713,001,15-06-2017,159,169,894,,,,,,
+B40B1713,001,16-06-2017,161,171,892,,,,,,
+B40B1713,001,17-06-2017,162,172,891,,,,,,
+B40B1713,001,18-06-2017,163,173,890,,,,,,
+B40B1713,001,19-06-2017,164,174,889,,,,,,
+B40B1713,001,20-06-2017,165,175,888,,,,,,

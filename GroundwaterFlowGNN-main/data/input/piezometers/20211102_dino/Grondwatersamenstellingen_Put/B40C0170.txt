@@ -1,0 +1,8 @@
+LOCATIE gegevens
+NITG-nr	X-coord	Y-coord	Coordinaat systeem	Kaartblad	Bepaling locatie	Maaiveldhoogte (m tov NAP)	Bepaling maaiveldhoogte	OLGA-nr	RIVM-nr	Aantal analyses	Meetnet	Indeling	
+B40C0170	187435	428759	Rijksdriehoeksmeting	40C	Geschat, detailkaart 1:500	16.05		40CA3170		2			
+
+KWALITEIT gegevens VLOEIBAAR
+NITG-nr	Monster datum	Monster-nr	Monster apparatuur	Mengmonster	Bovenkant monster (cm tov MV)	Onderkant monster (cm tov MV)	Analyse datum	CO2 (mg/l)	CO3-- (mg/l)	Ca (mg/l)	Cl- (mg/l)	EC (uS/cm)	Fe (mg/l)	H2S (mg/l)	HCO3 (mg/l)	KLEUR (mgPt/l)	KMNO4V-G (mg/l)	KMNO4V-O (mg/l)	Mg (mg/l)	Mn (mg/l)	NH4 (mg/l)	NH4-ORG (mg/l)	NO2 (mg/l)	NO3 (mg/l)	Na (mg/l)	NaHCO3 (mg/l)	SO4 (mg/l)	SiO2 (mg/l)	T-O2 (C)	T-PO4 (mg/l)	TEMP-V (C)	TIJDH (mmol/l)	TOTH (mmol/l)	
+B40C0170	27-01-1922	C1922-01-1008		nee	6000.0	6100.0	27-01-1922		0	40.2	14.3	26.08	.4	0	91	3	3.9	4.2	6.3				.2	24.7	8.8	0	25.4	9.2	0	0	18	1.51	1.278	
+B40C0170	11-11-1921	C1921-11-1005		nee	1900.0	2000.0	11-11-1921	18.5	0	77.6	57.5	67.45	.45	0	85	5	4.8	5.7	10.9	.19	.06	.05	0	182	57.5	0	61.9	16.2	0	0	18	1.4	2.412	

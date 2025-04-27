@@ -1,0 +1,31 @@
+Titel:,,,,,,,,,,,
+Gebruikersnaam:,,,,,,,,,,,
+Periode aangevraagd:,01-01-1800,tot:,02-11-2021,,,,,,,,
+Gegevens beschikbaar:,15-10-1952,tot:,14-10-1955,,,,,,,,
+Datum: ,02-11-2021,,,,,,,,,,
+Referentie:,NAP,,,,,,,,,,
+
+NAP:,Normaal Amsterdams Peil,,,,,,,,,,
+MV:,Maaiveld,,,,,,,,,,
+MP:,Meetpunt,,,,,,,,,,
+
+Locatie,Filternummer,Externe aanduiding,X-coordinaat,Y-coordinaat,Maaiveld (cm t.o.v. NAP),Datum maaiveld gemeten,Startdatum,Einddatum,Meetpunt (cm t.o.v. NAP),Meetpunt (cm t.o.v. MV),Bovenkant filter (cm t.o.v. NAP),Onderkant filter (cm t.o.v. NAP)
+B40C0563,001,40CL0014,188030,431750,954,15-10-1952,15-10-1952,28-04-1955,949,-5,,
+B40C0563,001,40CL0014,188030,431750,954,15-10-1952,28-04-1955,28-08-1957,948,-6,,
+
+
+Locatie,Filternummer,Peildatum,Stand (cm t.o.v. MP),Stand (cm t.o.v. MV),Stand (cm t.o.v. NAP),Bijzonderheid,Opmerking,,,
+B40C0563,001,15-10-1952,,,,D,,,,,
+B40C0563,001,16-12-1952,65,70,884,,,,,,
+B40C0563,001,29-04-1953,123,128,826,,,,,,
+B40C0563,001,27-08-1953,134,139,815,,,,,,
+B40C0563,001,15-10-1953,199,204,750,,,,,,
+B40C0563,001,15-12-1953,200,205,749,D,,,,,
+B40C0563,001,28-04-1954,178,183,771,,,,,,
+B40C0563,001,27-08-1954,116,121,833,,,,,,
+B40C0563,001,14-10-1954,77,82,872,,,,,,
+B40C0563,001,13-12-1954,89,94,860,,,,,,
+B40C0563,001,28-04-1955,82,88,866,,,,,,
+B40C0563,001,09-05-1955,111,117,837,,,,,,
+B40C0563,001,25-08-1955,132,138,816,,,,,,
+B40C0563,001,14-10-1955,148,154,800,,,,,,

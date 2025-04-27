@@ -1,0 +1,28 @@
+Titel:,,,,,,,,,,,
+Gebruikersnaam:,,,,,,,,,,,
+Periode aangevraagd:,01-01-1800,tot:,02-11-2021,,,,,,,,
+Gegevens beschikbaar:,28-08-1997,tot:,13-02-1998,,,,,,,,
+Datum: ,02-11-2021,,,,,,,,,,
+Referentie:,NAP,,,,,,,,,,
+
+NAP:,Normaal Amsterdams Peil,,,,,,,,,,
+MV:,Maaiveld,,,,,,,,,,
+MP:,Meetpunt,,,,,,,,,,
+
+Locatie,Filternummer,Externe aanduiding,X-coordinaat,Y-coordinaat,Maaiveld (cm t.o.v. NAP),Datum maaiveld gemeten,Startdatum,Einddatum,Meetpunt (cm t.o.v. NAP),Meetpunt (cm t.o.v. MV),Bovenkant filter (cm t.o.v. NAP),Onderkant filter (cm t.o.v. NAP)
+B40B0610,001,40BL9002,190962,440603,1015,28-09-1979,28-09-1979,28-02-1998,1054,39,866,766
+
+
+Locatie,Filternummer,Peildatum,Stand (cm t.o.v. MP),Stand (cm t.o.v. MV),Stand (cm t.o.v. NAP),Bijzonderheid,Opmerking,,,
+B40B0610,001,28-08-1997,236,197,818,,,,,,
+B40B0610,001,15-09-1997,240,201,814,,,,,,
+B40B0610,001,26-09-1997,245,206,809,,,,,,
+B40B0610,001,13-10-1997,242,203,812,,,,,,
+B40B0610,001,27-10-1997,244,205,810,,,,,,
+B40B0610,001,13-11-1997,247,208,807,,,,,,
+B40B0610,001,27-11-1997,253,214,801,,,,,,
+B40B0610,001,15-12-1997,256,217,798,,,,,,
+B40B0610,001,29-12-1997,250,211,804,,,,,,
+B40B0610,001,13-01-1998,234,195,820,,,,,,
+B40B0610,001,26-01-1998,227,188,827,,,,,,
+B40B0610,001,13-02-1998,226,187,828,,,,,,
