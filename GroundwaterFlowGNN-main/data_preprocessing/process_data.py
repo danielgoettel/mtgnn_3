@@ -260,51 +260,6 @@ def process_synthetic_data(synthetic_data_path, real_data_path, series_names, co
     return resampled_df, missing_data_mask
 
 
-
-def load_external_data(data_path, common_start_date, common_end_date, resampling_freq):
-    """
-    Load and preprocess external data sources including pumping wells, precipitation, evaporation, and river data.
-    
-    Parameters:
-    - data_path: Path to the directory containing external data files.
-    - common_start_date: The start date for filtering and resampling the data.
-    - common_end_date: The end date for filtering and resampling the data.
-    - resampling_freq: Frequency for resampling the time series data.
-    
-    Returns:
-    - Tuple of DataFrames: (df_pumping_wells, df_precipitation, df_evaporation, df_river)
-    """
-    # Load pumping wells data
-    df_pumping_wells = pd.read_csv(data_path / "wells/wells_daily_preprocessed.csv", index_col='Datum', parse_dates=True)
-    df_pumping_wells.index = pd.to_datetime(df_pumping_wells.index)
-    df_pumping_wells = resample_df(df_pumping_wells, common_start_date, common_end_date, resampling_freq ).fillna(0)
-    
-    # Load precipitation data
-    df_precipitation = pd.read_csv(data_path / "meteo_metadata_and_timeseries/precipitation.csv")
-    df_precipitation = df_precipitation.rename(columns={'Unnamed: 0': 'Datum'})
-    df_precipitation['Datum'] = pd.to_datetime(df_precipitation['Datum'])
-    df_precipitation = df_precipitation.set_index('Datum')
-    df_precipitation = resample_df(df_precipitation, common_start_date, common_end_date, resampling_freq )
-    
-    # Load evaporation data
-    df_evaporation = pd.read_csv(data_path / "meteo_metadata_and_timeseries/evaporation.csv")
-    df_evaporation = df_evaporation.rename(columns={'Unnamed: 0': 'Datum'})
-    df_evaporation['Datum'] = pd.to_datetime(df_evaporation['Datum'])
-    df_evaporation = df_evaporation.set_index('Datum')
-    df_evaporation = resample_df(df_evaporation, common_start_date, common_end_date, resampling_freq )
-    
-    # Load river data
-    df_river = pd.read_csv(data_path / "river/river_daily.csv")
-    df_river = df_river.rename(columns={'Unnamed: 0': 'Datum'})
-    df_river['Datum'] = pd.to_datetime(df_river['Datum'])
-    # Set the index to 'Datum'
-    df_river = df_river.set_index('Datum')
-    df_river = resample_df(df_river, common_start_date, common_end_date, resampling_freq )
-
-    return df_pumping_wells, df_precipitation, df_evaporation, df_river
-
-
-
 def split_and_normalize_data(df_piezo, missing_data_mask, external_data, config):
     """
     Splits the dataset into training, validation, and test sets, normalizes them, and also splits the missing data mask.
@@ -355,74 +310,89 @@ def define_configuration(synthetic_data):
 
 
 
-def main(synthetic_data = False):
-    config = define_configuration(synthetic_data)
+def load_external_data(data_path, common_start_date, common_end_date, resampling_freq):
+    """
+    Load and preprocess external data sources including pumping wells data.
+
+    Parameters:
+    - data_path: Path to the directory containing external data files.
+    - common_start_date: The start date for filtering and resampling the data.
+    - common_end_date: The end date for filtering and resampling the data.
+    - resampling_freq: Frequency for resampling the time series data.
+
+    Returns:
+    - DataFrame: df_pumping_wells
+    """
+    cache_path = data_path / "pumping_wells_processed.pkl"
+
+    if cache_path.exists():
+        print("✅ Loading cached pumping wells data...")
+        df_pumping_wells = pd.read_pickle(cache_path)
+    else:
+        print("⚙️ Processing pumping wells data...")
+        pumping_file_1 = data_path / "wells" / "wells_data_1.csv"
+        pumping_file_2 = data_path / "wells" / "wells_data_2.csv"
+
+        # Load pumping wells data
+        df_pump1 = pd.read_csv(pumping_file_1, header=0, parse_dates=['Datum'], index_col='Datum', na_values ='-')
+        df_pump2 = pd.read_csv(pumping_file_2, header=0, parse_dates=['Datum'], index_col='Datum', na_values ='-')
+
+        # Convert df_pump1 from m3/month to m3/day
+        days_in_month = df_pump1.index.days_in_month
+        df_pump1 = df_pump1.div(days_in_month, axis=0)
+
+        # Concatenate dataframes
+        df_pumping_wells = pd.concat([df_pump1, df_pump2])
+
+        # Sort by date index after concatenation
+        df_pumping_wells.sort_index(inplace=True)
+
+        # Resample dataframe
+        df_pumping_wells = resample_df(df_pumping_wells, common_start_date, common_end_date, resampling_freq).fillna(0)
+
+        # Cache the processed data
+        df_pumping_wells.to_pickle(cache_path)
+        print("💾 Pumping wells data cached.")
+
+    return df_pumping_wells
+
+def main():
+    config = define_configuration(False)
 
     data_path, base_data_path = setup_environment()
-    
-    # File paths for saving/loading processed data and configuration hash
-    # Adjust file paths based on whether data is synthetic
-    data_type_prefix = "_synthetic" if config['synthetic_data'] else ""
-    processed_data_filepath = base_data_path / f'processed_data{data_type_prefix}.pkl'
-    config_hash_filepath = base_data_path / f'config_hash{data_type_prefix}.pkl'
 
-    data = load_data(base_data_path, config)
+    processed_data_filepath = base_data_path / 'processed_data.pkl'
 
-    common_start_date = pd.Timestamp('2008-01-01') if config['synthetic_data'] else pd.Timestamp('2004-01-01')
-    
-    if data is not None:
-        # Unpack loaded data
-        df_piezo, missing_data_mask = data
-        print("Data loaded from saved file.")
+    # Attempt to load cached df_piezo and mask
+    if processed_data_filepath.exists():
+        print("✅ Loading cached piezometer data...")
+        df_piezo, missing_data_mask = pd.read_pickle(processed_data_filepath)
     else:
-        print("Processing new data.")
-        setup_environment()
+        print("⚙️ Processing new piezometer data...")
+        series_names = load_and_filter_series(config['aquifer'])
+        complete_daily = process_series(series_names, config['start_year'], config['resampling_freq'])
+        df_piezo, missing_data_mask = fill_and_select_data(complete_daily, config['n_nodes_selection'])
+        save_column_names(df_piezo.columns, base_data_path, '_real')
+        pd.to_pickle((df_piezo, missing_data_mask), processed_data_filepath)
+        print("💾 Piezometer data cached.")
 
-        if config['synthetic_data']:
-            
-            series_names_real = load_column_names(base_data_path, '_real' )
-            synthetic_data_path = Path('scripts/data/simulated_data/results/timeseries/')
-            df_piezo, missing_data_mask = process_synthetic_data(synthetic_data_path, data_path, series_names_real, config)
-            save_column_names(df_piezo.columns, base_data_path, '_synthetic')
-
-        else:
-            series_names = load_and_filter_series(config['aquifer'])
-            complete_daily = process_series(series_names, config['start_year'], config['resampling_freq'])
-            df_piezo, missing_data_mask = fill_and_select_data(complete_daily, config['n_nodes_selection'])
-            save_column_names(df_piezo.columns, base_data_path, '_real')
-
-        common_end_date = df_piezo.index[-1]
-
-        df_pumping_wells, df_precipitation, df_evaporation, df_river = load_external_data(data_path, common_start_date, common_end_date, config['resampling_freq'])
-
-        # Save processed data and config hash
-        data_to_save = (df_piezo, missing_data_mask)
-        # save_data_with_config_hash(data_to_save, config, processed_data_filepath, config_hash_filepath)
-        save_data(data_to_save, processed_data_filepath)
-
-
-
+    common_start_date = pd.Timestamp('2004-01-01')
     common_end_date = df_piezo.index[-1]
 
-    df_pumping_wells, df_precipitation, df_evaporation, df_river = load_external_data(data_path, common_start_date, common_end_date, config['resampling_freq'])
+    # Load pumping wells data (already cached in load_external_data)
+    df_pumping_wells = load_external_data(data_path, common_start_date, common_end_date, config['resampling_freq'])
 
-    # Example definitions based on processed data
-    df_piezo_columns = df_piezo.columns.tolist()  # Piezometer column names
-    pump_columns = df_pumping_wells.columns.tolist()  # Pump column names
+    # Prepare columns
+    df_piezo_columns = df_piezo.columns.tolist()
+    pump_columns = df_pumping_wells.columns.tolist()
 
-    exclude_locations = ['Driel beneden', 'Driel boven', 'Arnhem']
-    df_river = df_river.drop(columns=exclude_locations, errors='ignore')
+    # Split and normalize
+    train_data, val_data, test_data, train_mask, val_mask, test_mask, scaler = split_and_normalize_data(
+        df_piezo, missing_data_mask, (df_pumping_wells,), config
+    )
 
-    # Count the missing data for each location
-    missing_counts = df_river.isna().sum()
-    
-    locations_no_missing = missing_counts[missing_counts == 0].index
-    df_river = df_river[locations_no_missing]
+    return train_data, val_data, test_data, train_mask, val_mask, test_mask, df_piezo_columns, pump_columns, scaler
 
-    train_data, val_data, test_data, train_mask, val_mask, test_mask, scaler = split_and_normalize_data(df_piezo, missing_data_mask, (df_pumping_wells, df_precipitation, df_evaporation, df_river), config)
-
-    # Return the additional variables alongside the datasets
-    return train_data, val_data, test_data, train_mask, val_mask, test_mask, df_piezo_columns, pump_columns, locations_no_missing, scaler
 
 if __name__ == "__main__":
     main()

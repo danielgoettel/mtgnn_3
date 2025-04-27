@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader
 import json
 
 import sys
-sys.path.insert(0, 'C:\\codes\\wells_time\\scripts')
+sys.path.insert(0, 'C:\\Users\\danielg\\PycharmProjects\\Taccari_et_al\\GroundwaterFlowGNN-main\\data_preprocessing')
 
 from data_preprocessing import process_data 
 from data_preprocessing import gnn_data_prep 
@@ -275,7 +275,7 @@ def train(model, optimizer, loss_function, device, num_epochs, train_data, val_d
             if "CUDA out of memory" in str(e):
                 print(f"Out of memory when processing {model_filename}.")
                 with open(failed_runs_filepath, "a") as file:
-                    file.write(f"{model_filename}\n")
+                    file.write(f"{model_filename}\\n")
                 return None  # Exit the training function early
             else:
                 raise  # Re-raise the exception if it's not a memory error
@@ -283,7 +283,7 @@ def train(model, optimizer, loss_function, device, num_epochs, train_data, val_d
 
 def define_base_configuration():
     return {
-        'synthetic_data': True,
+        'synthetic_data': False,
         'percentage': None,
         'n_piezo_connected': 3,
         'W': 5,

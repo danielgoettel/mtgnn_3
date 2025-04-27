@@ -406,3 +406,62 @@ def plot_rmse_comparison(model1_rmse, model2_rmse, label1, label2, color_dict):
     # Show the plot
     plt.show()
 
+
+
+def load_piezometer_coords(metadata_csv, piezo_ids):
+    """
+    Read well_metadata.csv, filter & reorder to piezo_ids,
+    and return an Nx2 array of [x_coord, y_coord].
+    """
+    md = pd.read_csv(metadata_csv)
+    # use external_id to match
+    md = md.set_index('external_id').reindex(piezo_ids)
+    return md[['x_coord', 'y_coord']].to_numpy()
+
+def plot_graph_2d_from_metadata(
+    metadata_csv: str,
+    piezo_ids: list[str],
+    adj: np.ndarray,
+    node_size: float = 50,
+    edge_alpha: float = 0.7,
+    edge_width_scale: float = 5.0
+):
+    """
+    Plot graph using coords from metadata_csv for piezo nodes.
+    Any pump nodes will be placed at (0,0) unless you supply real coords.
+    """
+    # --- load piezo coords
+    piezo_coords = load_piezometer_coords(metadata_csv, piezo_ids)
+    num_piezo = len(piezo_ids)
+    num_nodes = adj.shape[0]
+
+    # --- build a full coords array: piezos first, pumps at (0,0)
+    coords = np.zeros((num_nodes, 2))
+    coords[:num_piezo, :] = piezo_coords
+    # coords[num_piezo:, :] remain (0,0) unless you have pump coords
+
+    # --- plot edges
+    fig, ax = plt.subplots()
+    for i in range(num_nodes):
+        for j in range(i+1, num_nodes):
+            w = adj[i, j]
+            if w != 0:
+                xi, yi = coords[i]
+                xj, yj = coords[j]
+                ax.plot([xi, xj], [yi, yj],
+                        linewidth=w * edge_width_scale,
+                        alpha=edge_alpha)
+
+    # --- plot nodes
+    ax.scatter(coords[:, 0], coords[:, 1], s=node_size, color='k')
+    for idx, (x, y) in enumerate(coords):
+        ax.text(x, y, str(idx), fontsize=8,
+                va='bottom', ha='right')
+
+    ax.set_xlabel("X coordinate")
+    ax.set_ylabel("Y coordinate")
+    ax.set_aspect('equal', 'box')
+    plt.tight_layout()
+    plt.show()
+
+
